@@ -17,19 +17,21 @@ public class CW_Task_03 {
         System.out.print("Введите число: ");
         int n = iScanner.nextInt();
         iScanner.close();
-        int temp = 0;
+        int l = 0;
+        int r = 0;
         int[] arr = new int[] { 3, 3, 2, 2, 3, 4, 3, 2 };
+        int[] arrR = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == n) {
-                for (int j = i; j < arr.length - 1; j++) {
-                    temp = arr[j + 1];
-                    arr[j + 1] = arr[j];
-                    arr[j] = temp;
-                }
+                arrR[arr.length - 1 - r] = n;
+                r++;
+            } else {
+                arrR[l] = arr[i];
+                l++;
             }
         }
         for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-            }
+            System.out.print(arrR[i] + " ");
+        }
     }
 }
