@@ -7,6 +7,21 @@
 
 package Seminar_1;
 
+// import java.util.Scanner;
+
 public class Task_04_HW {
-    
+    public static void main(String[] args) {
+        // Scanner iScanner = new Scanner(System.in, "Cp866");
+        // System.out.printf("Введите выражение: ");
+        // String name = iScanner.nextLine();
+        // iScanner.close();
+        String name = "2? + ?5 = 69";
+        name = name.replaceAll("\\s", "");
+        String[] parts = name.split("=");
+        System.out.printf("Без пробелов, %s", name);
+        System.out.println();
+        for (String word : parts) {
+            System.out.println(word);
+        }
+    }
 }
