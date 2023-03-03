@@ -18,10 +18,14 @@ public class Task_04_HW {
         String name = "2? + ?5 = 69";
         name = name.replaceAll("\\s", "");
         String[] parts = name.split("=");
-        System.out.printf("Без пробелов, %s", name);
-        System.out.println();
-        for (String word : parts) {
-            System.out.println(word);
-        }
+        String rezR = parts[1];
+        String rezL = parts[0];
+        parts = rezL.split("\\+");
+        String rezLa = parts[0];
+        String rezLb = parts[1];
+        int indexLa = rezLa.indexOf('?');
+
+        int indexLb = rezLb.indexOf('?');
+        System.out.println(rezLa + " + " + rezLb + " = " + rezR + " indLa = " + indexLa + " indLb = " + indexLb);
     }
 }

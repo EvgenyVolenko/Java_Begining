@@ -32,6 +32,6 @@ public class Task_02_HW {
                 rez += simpleDigit + ", ";
             }
         }
-        System.out.println(rez);
+        System.out.print(rez);
     }
 }

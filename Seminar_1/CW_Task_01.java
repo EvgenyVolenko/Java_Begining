@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class CW_Task_01 {
     public static void main(String[] args) {
-        Scanner iScanner = new Scanner(System.in,"Cp866");
-        System.out.printf("Введите свое имя: ");
+        Scanner iScanner = new Scanner(System.in, "Cp866");
+        System.out.print("Введите свое имя: ");
         String name = iScanner.nextLine();
         iScanner.close();
         System.out.printf("Привет, %s!", name);

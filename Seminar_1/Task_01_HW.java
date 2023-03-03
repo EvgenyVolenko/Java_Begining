@@ -18,9 +18,9 @@ public class Task_01_HW {
             sum += i;
             fact *= i;
         }
-        System.out.printf("Треугольное число = ");    
+        System.out.print("Треугольное число = ");    
         System.out.println(sum);
-        System.out.printf("n! = "); 
+        System.out.print("n! = "); 
         System.out.println(fact);
     }    
 }
