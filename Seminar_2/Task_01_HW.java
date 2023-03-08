@@ -14,6 +14,11 @@ public class Task_01_HW {
         int[] arr = new int[] {8, 4, 9, 1, 6, 5, 3, 2, 7};
         FileHandler fh = new FileHandler("log.txt");
         WriteToFile(arr);
+        try {
+            WriteToLog(arr, fh);
+        } catch (IOException e) {
+            System.out.println("Что то пошло не так");
+        }
         System.out.println(Arrays.toString(arr));
         BubbleSort(arr, fh);
         System.out.println(Arrays.toString(arr));
