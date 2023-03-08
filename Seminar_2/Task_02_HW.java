@@ -30,9 +30,9 @@ public class Task_02_HW {
                 line = line.replaceAll("\"", "");
                 for (int i = 0; i < strparse(line).length; i++) {
                     rezZn = strparsekey(strparse(line)[i])[1];
-                    rez.append(pole[i]).append(rezZn).append(".");
+                    rez.append(pole[i]).append(rezZn);
                 }
-                System.out.println(rez);
+                System.out.println(rez.append("."));
                 rez.setLength(0);
                 line = reader.readLine();                         
             }
