@@ -19,29 +19,28 @@ public class Task_01_HW {
 
     static int[] arrDrob(int[] arr) {
 
-        if (arr.length == 1) {
-            return arr;
-        } else {
-            int[] arrL = new int[arr.length / 2];
-            int[] arrR = new int[arr.length - arr.length / 2];
-            for (int i = 0; i < arrL.length; i++) {
-                arrL[i] = arr[i];
-            }
-            for (int i = 0; i < arrR.length; i++) {
-                arrR[i] = arr[i + arrL.length];
-            }
-            arrL = arrDrob(arrL);
-            arrR = arrDrob(arrR);
-            System.out.println(Arrays.toString(arrSlit(arrL, arrR)));
-            return arrSlit(arrL, arrR);
+        if (arr.length == 1) return arr;
+
+        int[] arrL = new int[arr.length / 2];
+        int[] arrR = new int[arr.length - arr.length / 2];
+        for (int i = 0; i < arrL.length; i++) {
+            arrL[i] = arr[i];
         }
+        for (int i = 0; i < arrR.length; i++) {
+            arrR[i] = arr[i + arrL.length];
+        }
+        arrL = arrDrob(arrL);
+        arrR = arrDrob(arrR);
+        System.out.println(Arrays.toString(arrSlit(arrL, arrR)));
+        return arrSlit(arrL, arrR);
+
     }
 
     static int[] arrSlit(int[] arrayL, int[] arrayR) {
         int startL = 0, startR = 0;
         int[] arrRez = new int[arrayL.length + arrayR.length];
         for (int i = 0; i < arrRez.length; i++) {
-            
+
             if (startL == arrayL.length) {
                 arrRez[i] = arrayR[startR];
                 startR++;
