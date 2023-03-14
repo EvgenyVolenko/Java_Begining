@@ -18,15 +18,14 @@ public class CW_Task_03 {
             if (text.contains("print")) {
                 outtext(st);
             } else {
-                st.add(text);
+                st.push(text);
             }
-            System.out.println(st);
         }
     }
 
     public static void outtext(Stack<String> st) {
         while (!st.isEmpty()) {
-            System.out.println(st.pop());
+            System.out.print(st.pop() + " ");
         }
     }
 }
