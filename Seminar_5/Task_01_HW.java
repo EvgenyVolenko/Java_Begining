@@ -46,7 +46,6 @@ public class Task_01_HW {
             text = iScanner.next();
             nm = Integer.parseInt(text);
         }
-        System.out.println(teleDB);
         iScanner.close();
     }
 
