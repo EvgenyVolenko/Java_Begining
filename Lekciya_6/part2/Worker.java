@@ -8,12 +8,12 @@ public class Worker {
 
     @Override
     public String toString() {
-        return String.format("%d %s %s %d", id, firstName, lastName, salary);
+        return String.format("id %d %s %s %d", id, firstName, lastName, salary);
     }
 
     @Override
     public boolean equals(Object o) {
-        var t = (Worker) o;
+        Worker t = (Worker) o;
         return id == t.id && firstName == t.firstName;
     }
     @Override

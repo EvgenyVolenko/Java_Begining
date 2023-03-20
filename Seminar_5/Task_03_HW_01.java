@@ -16,20 +16,13 @@ public class Task_03_HW_01 {
     }
 
     public static void updateBoard(int row, int col, boolean[][] logicalBoard) {
-        // Turn all the cases corresponding to the row, column and diagonals of the
-        // element added to
-        // false
-        // 8x8 board
         int n = logicalBoard.length;
-        // update the row
         for (int j = 0; j < n; j++) {
             logicalBoard[row][j] = false;
         }
-        // update the column
         for (int j = 0; j < n; j++) {
             logicalBoard[j][col] = false;
         }
-        // update the diagonals
         int r = row;
         int c = col;
         while (r >= 0 && c >= 0) {

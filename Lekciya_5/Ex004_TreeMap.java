@@ -3,6 +3,9 @@ package Lekciya_5;
 import java.util.*;
 
 public class Ex004_TreeMap {
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         TreeMap<Integer,String> tMap = new TreeMap<>();
         tMap.put(1,"один"); System.out.println(tMap); 
@@ -15,5 +18,6 @@ public class Ex004_TreeMap {
         // {1=один, 3=три, 4=четыре, 6=шесть}
         tMap.put(2,"два"); System.out.println(tMap);
         // {1=один, 2=два, 3=три, 4=четыре, 6=шесть}
+        tMap.put(2,"четыре"); System.out.println(tMap);
     }
 }

@@ -31,7 +31,7 @@ public class Ex001_Program {
         w3.salary = 300;
         w3.id = 3000;
 
-        // System.out.println(w1);
+        System.out.println(w1.toString());
         // System.out.println(w2);
         // System.out.println(w3);
         //#endregion

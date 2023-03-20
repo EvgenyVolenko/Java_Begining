@@ -16,7 +16,7 @@ package Seminar_5;
 
 public class Task_03_HW {
     public static void main(String[] args) {
-        int size = 8;
+        int size = 4;
         String[][] chBoard = new String[size][size];
         String fillChar = "0", ferzChar = "X";
         fillChBoard(chBoard, fillChar);
@@ -25,19 +25,20 @@ public class Task_03_HW {
     }
 
     public static void fillChBoardFerz(String[][] chB, String ferzC) {
-        int str = 0, raw = 0;
+        int str = 0, raw = 1;
         String tempRaw = "", tempStr = "", tempDiagL = "", tempDiagR = "";
         chB[str][raw] = ferzC;
         for (int i = 0; i < chB.length; i++) {
             tempStr = strList(chB, i, tempStr);
+            
             for (int j = 0; j < chB[0].length; j++) {
                 tempRaw = rawList(chB, j, tempRaw);
                 tempDiagR = tempDiagRList(chB, i, j, tempDiagR);
                 tempDiagL = tempDiagLList(chB, i, j, tempDiagL);
-                System.out.println("str " + i + " " + tempStr);
-                System.out.println("raw " + j + " " + tempRaw);
-                System.out.println("DiR " + tempDiagR);
-                System.out.println("DiL " + tempDiagL);
+                // System.out.println("str " + i + " " + tempStr);
+                // System.out.println("raw " + j + " " + tempRaw);
+                // System.out.println("DiR " + tempDiagR);
+                // System.out.println("DiL " + tempDiagL);
                 if (!tempRaw.contains(ferzC) && !tempStr.contains(ferzC) && !tempDiagR.contains(ferzC) && !tempDiagL.contains(ferzC)) {
                     chB[i][j] = ferzC;
                 } 
