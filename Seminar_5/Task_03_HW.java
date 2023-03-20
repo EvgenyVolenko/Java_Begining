@@ -16,7 +16,7 @@ package Seminar_5;
 
 public class Task_03_HW {
     public static void main(String[] args) {
-        int size = 4;
+        int size = 8;
         String[][] chBoard = new String[size][size];
         String fillChar = "0", ferzChar = "X";
         fillChBoard(chBoard, fillChar);
@@ -28,7 +28,7 @@ public class Task_03_HW {
         int str = 0, raw = 1;
         String tempRaw = "", tempStr = "", tempDiagL = "", tempDiagR = "";
         chB[str][raw] = ferzC;
-        for (int i = 0; i < chB.length; i++) {
+        for (int i = 1; i < chB.length; i++) {
             tempStr = strList(chB, i, tempStr);
             
             for (int j = 0; j < chB[0].length; j++) {
@@ -47,7 +47,7 @@ public class Task_03_HW {
                 tempDiagL = "";
             }
             tempStr = "";
-            System.out.println();
+            
         }
     }
 
