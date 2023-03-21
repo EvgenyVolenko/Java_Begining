@@ -12,6 +12,8 @@ public class Task_03_HW_03 {
         int[] ferzi = new int[N];
         String[][] ferziBoard = new String[N][N];
         String fillChar = "0", ferzChar = "X";
+
+        long startTime = System.currentTimeMillis();
         
         for (int z = 0; z < ferzi.length; z++) {
             ferzi[0] = z;
@@ -44,6 +46,8 @@ public class Task_03_HW_03 {
                 }
             }
         }
+        long estimatedTime = System.currentTimeMillis() - startTime;
+        System.out.println("Время выполнения, мс " + estimatedTime);
         System.out.println("Всего решений - " + count + " а переборов - " + countall);
     }
 

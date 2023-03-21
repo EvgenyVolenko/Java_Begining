@@ -4,12 +4,15 @@ public class Task_03_HW_02 {
     public static void main(String[] args) {
         int N = 8;
         String[][] mat = new String[N][N];
+        long startTime = System.currentTimeMillis();
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < mat.length; j++) {
                 mat[i][j] = "0";
             }
         }
         nQueen(mat, 0);
+        long estimatedTime = System.currentTimeMillis() - startTime;
+        System.out.println("Время выполнения, мс " + estimatedTime);
     }
 
     private static void nQueen(String[][] mat, int r) {

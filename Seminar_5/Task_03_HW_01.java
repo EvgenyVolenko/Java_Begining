@@ -102,6 +102,9 @@ public class Task_03_HW_01 {
     }
 
     public static void main(String[] args) {
+        long startTime = System.currentTimeMillis();
         arrangeQueens();
+        long estimatedTime = System.currentTimeMillis() - startTime;
+        System.out.println("Время выполнения, мс " + estimatedTime);
     }
 }
