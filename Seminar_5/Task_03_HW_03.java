@@ -5,18 +5,14 @@
 
 package Seminar_5;
 
-import java.util.Arrays;
-
 public class Task_03_HW_03 {
     public static void main(String[] args) {
         int N = 8;
         int count = 0, countall = 0;
-        // int[] ferzi = new int[]{7, 3, 0, 2, 5, 1, 6, 4};
         int[] ferzi = new int[N];
         String[][] ferziBoard = new String[N][N];
         String fillChar = "0", ferzChar = "X";
-        // fillFerzi(ferzi);
-
+        
         for (int z = 0; z < ferzi.length; z++) {
             ferzi[0] = z;
             for (int k = 0; k < ferzi.length; k++) {
@@ -33,11 +29,10 @@ public class Task_03_HW_03 {
                                     ferzi[6] = l2;
                                     for (int index = 0; index < ferzi.length; index++) {
                                         ferzi[7] = index;
-                                        // System.out.println(Arrays.toString(ferzi));
                                         if (checkFerzi(ferzi, ferziBoard, ferzChar)) {
                                             printCHBoard(ferziBoard);
-                                            System.out.println(++count);
-                                            
+                                            System.out.println();
+                                            count++;
                                         }
                                         countall++;
                                         fillChBoard(ferziBoard, fillChar);
@@ -51,12 +46,6 @@ public class Task_03_HW_03 {
         }
         System.out.println("Всего решений - " + count + " а переборов - " + countall);
     }
-
-    // public static void fillFerzi(int[] f) {
-    // for (int i = 0; i < f.length; i++) {
-    // f[i] = 0;
-    // }
-    // }
 
     public static boolean checkFerzi(int[] ferzi, String[][] ferziBoard, String ferzc) {
         fillChFerzi(ferzi, ferziBoard, ferzc);
