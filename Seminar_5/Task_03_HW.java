@@ -28,7 +28,7 @@ public class Task_03_HW {
         int str = 0, raw = 1;
         String tempRaw = "", tempStr = "", tempDiagL = "", tempDiagR = "";
         chB[str][raw] = ferzC;
-        for (int i = 1; i < chB.length; i++) {
+        for (int i = 0; i < chB.length; i++) {
             tempStr = strList(chB, i, tempStr);
             
             for (int j = 0; j < chB[0].length; j++) {
@@ -41,6 +41,7 @@ public class Task_03_HW {
                 // System.out.println("DiL " + tempDiagL);
                 if (!tempRaw.contains(ferzC) && !tempStr.contains(ferzC) && !tempDiagR.contains(ferzC) && !tempDiagL.contains(ferzC)) {
                     chB[i][j] = ferzC;
+                    break;
                 } 
                 tempRaw = "";
                 tempDiagR = "";
