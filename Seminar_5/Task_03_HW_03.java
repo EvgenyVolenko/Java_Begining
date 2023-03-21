@@ -5,6 +5,8 @@
 
 package Seminar_5;
 
+import java.util.Arrays;
+
 public class Task_03_HW_03 {
     public static void main(String[] args) {
         int N = 8;
@@ -26,14 +28,16 @@ public class Task_03_HW_03 {
                         for (int j2 = 0; j2 < ferzi.length; j2++) {
                             ferzi[4] = j2;
                             for (int l = 0; l < ferzi.length; l++) {
-                                ferzi[5] = 0;
+                                ferzi[5] = l;
                                 for (int l2 = 0; l2 < ferzi.length; l2++) {
                                     ferzi[6] = l2;
                                     for (int index = 0; index < ferzi.length; index++) {
                                         ferzi[7] = index;
+                                        // System.out.println(Arrays.toString(ferzi));
                                         if (checkFerzi(ferzi, ferziBoard, ferzChar)) {
                                             printCHBoard(ferziBoard);
                                             System.out.println(++count);
+                                            
                                         }
                                         countall++;
                                         fillChBoard(ferziBoard, fillChar);
