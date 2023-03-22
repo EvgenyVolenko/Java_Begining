@@ -5,6 +5,8 @@
 
 package Seminar_6.HW_Final;
 
+import java.util.HashSet;
+
 public class notebook {
     private String manufacturer;
     private int ozuCapacity;
@@ -63,6 +65,54 @@ public class notebook {
     @Override
     public String toString() {
         return String.format("Ноутбук %s %s [RAM %d ГБ, HDD %d ГБ, ОС %s]", manufacturer, color, ozuCapacity, hddCapacity, osType);
+    }
+
+    public static void printMMOzu(HashSet<notebook> notebooks, int min, int max) {
+        System.out.println();
+        for (notebook note : notebooks) {
+            if (note.ozuCapacity <= max && note.ozuCapacity >= min) {
+                System.out.println(note.toString());
+            }
+        }
+        System.out.println();
+    }
+
+    public static void printMMHdd(HashSet<notebook> notebooks, int min, int max) {
+        System.out.println();
+        for (notebook note : notebooks) {
+            if (note.hddCapacity <= max && note.hddCapacity >= min) {
+                System.out.println(note.toString());
+            }
+        }
+        System.out.println();
+    }
+
+    public static void printByOS(HashSet<notebook> notebooks, String os) {
+        System.out.println();
+        for (notebook note : notebooks) {
+            if (note.osType.equals(os)) {
+                System.out.println(note.toString());
+            }
+        }
+        System.out.println();
+    }
+
+    public static void printByColor(HashSet<notebook> notebooks, String color) {
+        System.out.println();
+        for (notebook note : notebooks) {
+            if (note.color.equals(color)) {
+                System.out.println(note.toString());
+            }
+        }
+        System.out.println();
+    }
+
+    public static void printAll(HashSet<notebook> notebooks) {
+        System.out.println();
+        for (notebook note : notebooks) {
+            System.out.println(note.toString());
+        }
+        System.out.println();
     }
 
 }
