@@ -121,9 +121,6 @@ public class market {
             texts.printReq();
             text = iScanner.next();
         }
-
-        note1.setManufacturer("ГРАНИТ");
-        
         iScanner.close();
     }
 }
